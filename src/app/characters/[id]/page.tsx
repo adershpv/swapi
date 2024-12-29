@@ -1,5 +1,6 @@
 import { SWAPI_BASE_URL } from "@/app/constants";
 import { Character } from "@/app/types";
+import { Button } from "@nextui-org/button";
 
 export default async function Page({
   params,
@@ -15,6 +16,7 @@ export default async function Page({
     <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
       <h1>{properties.name}</h1>
       <p>
+        <Button>Click me</Button>
         <strong>Description:</strong> {description}
       </p>
       <table
