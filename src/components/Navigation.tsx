@@ -20,10 +20,6 @@ const menuItems = [
     url: "/characters",
   },
   {
-    name: "Films",
-    url: "/films",
-  },
-  {
     name: "Favorites",
     url: "/favorites",
   },
@@ -31,12 +27,12 @@ const menuItems = [
 
 export default function Navigation() {
   const pathname = usePathname();
-  const isActive = (href: string): boolean => pathname === href;
+  const isActive = (href: string): boolean => pathname.includes(href);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
+    <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-white h-20">
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -57,7 +53,7 @@ export default function Navigation() {
         ))}
       </NavbarContent>
 
-      <NavbarMenu>
+      <NavbarMenu className="py-10">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={index}>
             <Link

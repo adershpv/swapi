@@ -1,6 +1,7 @@
 import { SWAPI_BASE_URL } from "@/app/constants";
 import { Character } from "@/app/types";
-import { Button } from "@nextui-org/button";
+import CharacterDetail from "@/components/CharacterDetail";
+import { fetchAllItems } from "@/utilities/fetchAllItems";
 
 export default async function Page({
   params,
@@ -9,38 +10,25 @@ export default async function Page({
 }) {
   const id = (await params).id;
   const response = await fetch(`${SWAPI_BASE_URL}/people/${id}`);
-  const { result: character } = await response.json();
-  const { properties, description } = character;
+  const character: Character = await response.json();
+
+  const homeplanetReq = await fetch(character.homeworld);
+  const homeplanet = await homeplanetReq.json();
+  character.homeplanet = homeplanet.name;
+
+  const films = await fetchAllItems("films");
+  const ships = await fetchAllItems("starships");
+
+  character.movies = films.filter((film) =>
+    film.characters.includes(character.url),
+  );
+
+  character.ships = ships.filter((ship) => ship.pilots.includes(character.url));
 
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
-      <h1>{properties.name}</h1>
-      <p>
-        <Button>Click me</Button>
-        <strong>Description:</strong> {description}
-      </p>
-      <table
-        border={1}
-        cellPadding="8"
-        style={{ borderCollapse: "collapse", width: "100%" }}
-      >
-        <thead>
-          <tr>
-            <th>Attribute</th>
-            <th>Value</th>
-          </tr>
-        </thead>
-        <tbody>
-          {Object.entries(properties).map(([key, value]) => (
-            <tr key={key}>
-              <td>
-                <strong>{key.replace("_", " ")}</strong>
-              </td>
-              <td>{value}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+    <>
+      <h1 className="text-4xl font-extrabold my-6">{character.name}</h1>
+      <CharacterDetail character={character} />
+    </>
   );
 }
