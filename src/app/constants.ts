@@ -13,5 +13,7 @@ export const DISPLAY_PROPERTIES: Array<keyof Character> = [
   "skin_color",
   "eye_color",
   "birth_year",
-  "homeplanet",
+  "home_planet",
+  "movies",
+  "ships",
 ];

@@ -32,7 +32,7 @@ export interface Character {
   url: string;
 
   // Extended properties
-  homeplanet?: string;
+  home_planet?: string;
   movies?: { title: string; url: string }[];
   ships?: { name: string; url: string }[];
 }

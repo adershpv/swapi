@@ -11,7 +11,7 @@ export default async function Page({ params }: { params: { id: string } }) {
   // Fetch the home planet
   const homeplanetReq = await fetch(character.homeworld);
   const homeplanet = await homeplanetReq.json();
-  character.homeplanet = homeplanet.name;
+  character.home_planet = homeplanet.name;
 
   // Fetch all films and starships
   const films = await fetchAllItems<{
