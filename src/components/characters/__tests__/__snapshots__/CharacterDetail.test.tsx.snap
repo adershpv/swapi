@@ -1,0 +1,604 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterDetail Snapshot matches the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="flex justify-between items-center my-6"
+  >
+    <h1
+      class="text-4xl font-extrabold"
+    >
+      Luke Skywalker
+    </h1>
+    <button
+      class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small gap-2 rounded-full px-0 !gap-0 transition-transform-colors-opacity motion-reduce:transition-none bg-transparent data-[hover=true]:bg-default/40 min-w-10 w-10 h-10 text-default-900/60 data-[hover]:bg-foreground/10"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class=""
+        fill="none"
+        focusable="false"
+        height="24"
+        role="presentation"
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <path
+          d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    class="flex flex-col relative gap-4 w-full"
+  >
+    <div
+      class="p-4 z-0 flex flex-col relative justify-between gap-4 bg-content1 overflow-auto rounded-large shadow-small w-full"
+    >
+      <table
+        aria-describedby=""
+        aria-label="Character Properties"
+        class="min-w-full h-auto table-auto w-full"
+        id="react-aria-:r0:"
+        role="grid"
+        tabindex="0"
+      >
+        <thead
+          class="[&>tr]:first:rounded-lg"
+          role="rowgroup"
+        >
+          <tr
+            class="group/tr outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            role="row"
+          >
+            <th
+              class="group/th px-3 h-10 align-middle bg-default-100 whitespace-nowrap text-foreground-500 text-tiny font-semibold first:rounded-s-lg last:rounded-e-lg data-[sortable=true]:cursor-pointer data-[hover=true]:text-foreground-400 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-start"
+              data-key="$.0"
+              id="react-aria-:r0:-$.0"
+              role="columnheader"
+              tabindex="-1"
+            >
+              Property
+            </th>
+            <th
+              class="group/th px-3 h-10 align-middle bg-default-100 whitespace-nowrap text-foreground-500 text-tiny font-semibold first:rounded-s-lg last:rounded-e-lg data-[sortable=true]:cursor-pointer data-[hover=true]:text-foreground-400 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-start"
+              data-key="$.1"
+              id="react-aria-:r0:-$.1"
+              role="columnheader"
+              tabindex="-1"
+            >
+              Detail
+            </th>
+          </tr>
+          <tr
+            aria-hidden="true"
+            class="w-px h-px block"
+            style="margin-left: 0.25rem; margin-top: 0.25rem;"
+            tabindex="-1"
+          />
+        </thead>
+        <tbody
+          role="rowgroup"
+        >
+          <tr
+            aria-labelledby="react-aria-:r0:-name-$.0"
+            class="group/tr outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            data-first="true"
+            data-key="name"
+            role="row"
+            tabindex="-1"
+          >
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-key="name.0"
+              id="react-aria-:r0:-name-$.0"
+              role="rowheader"
+              tabindex="-1"
+            >
+              <div
+                class="flex flex-col"
+              >
+                <p
+                  class="text-bold text-sm capitalize"
+                >
+                  name:
+                </p>
+              </div>
+            </td>
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-key="name.1"
+              role="gridcell"
+              tabindex="-1"
+            >
+              <div
+                class="relative flex items-center gap-2"
+              >
+                <p
+                  class="font-extrabold text-sm capitalize"
+                >
+                  Luke Skywalker
+                </p>
+              </div>
+            </td>
+          </tr>
+          <tr
+            aria-labelledby="react-aria-:r0:-height-$.0"
+            class="group/tr outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            data-key="height"
+            data-middle="true"
+            data-odd="true"
+            role="row"
+            tabindex="-1"
+          >
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-key="height.0"
+              id="react-aria-:r0:-height-$.0"
+              role="rowheader"
+              tabindex="-1"
+            >
+              <div
+                class="flex flex-col"
+              >
+                <p
+                  class="text-bold text-sm capitalize"
+                >
+                  height:
+                </p>
+              </div>
+            </td>
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-key="height.1"
+              role="gridcell"
+              tabindex="-1"
+            >
+              <div
+                class="relative flex items-center gap-2"
+              >
+                <div
+                  class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_8px)] is-filled"
+                  data-filled="true"
+                  data-filled-within="true"
+                  data-has-value="true"
+                  data-slot="base"
+                >
+                  <div
+                    class="h-full flex flex-col"
+                    data-slot="main-wrapper"
+                  >
+                    <div
+                      class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-8 min-h-8 px-2 rounded-small transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background is-filled"
+                      data-slot="input-wrapper"
+                      style="cursor: text;"
+                    >
+                      <div
+                        class="inline-flex w-full items-center h-full box-border"
+                        data-slot="inner-wrapper"
+                      >
+                        <input
+                          aria-label="Property Field"
+                          class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small group-data-[has-value=true]:text-default-foreground is-filled"
+                          data-filled="true"
+                          data-filled-within="true"
+                          data-slot="input"
+                          id="react-aria-:r2:"
+                          title=""
+                          type="text"
+                          value="172"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr
+            aria-labelledby="react-aria-:r0:-gender-$.0"
+            class="group/tr outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            data-key="gender"
+            data-middle="true"
+            role="row"
+            tabindex="-1"
+          >
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-key="gender.0"
+              id="react-aria-:r0:-gender-$.0"
+              role="rowheader"
+              tabindex="-1"
+            >
+              <div
+                class="flex flex-col"
+              >
+                <p
+                  class="text-bold text-sm capitalize"
+                >
+                  gender:
+                </p>
+              </div>
+            </td>
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-key="gender.1"
+              role="gridcell"
+              tabindex="-1"
+            >
+              <div
+                class="relative flex items-center gap-2"
+              >
+                <select
+                  class="bg-default-100 h-10 rounded-medium w-full px-3 appearance-none tap-highlight-transparent focus:outline-none"
+                >
+                  <option
+                    value="Male"
+                  >
+                    Male
+                  </option>
+                  <option
+                    value="Female"
+                  >
+                    Female
+                  </option>
+                  <option
+                    value="N/A"
+                  >
+                    N/A
+                  </option>
+                </select>
+              </div>
+            </td>
+          </tr>
+          <tr
+            aria-labelledby="react-aria-:r0:-mass-$.0"
+            class="group/tr outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            data-key="mass"
+            data-middle="true"
+            data-odd="true"
+            role="row"
+            tabindex="-1"
+          >
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-key="mass.0"
+              id="react-aria-:r0:-mass-$.0"
+              role="rowheader"
+              tabindex="-1"
+            >
+              <div
+                class="flex flex-col"
+              >
+                <p
+                  class="text-bold text-sm capitalize"
+                >
+                  mass:
+                </p>
+              </div>
+            </td>
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-key="mass.1"
+              role="gridcell"
+              tabindex="-1"
+            >
+              <div
+                class="relative flex items-center gap-2"
+              >
+                <p
+                  class="font-extrabold text-sm capitalize"
+                >
+                  77
+                </p>
+              </div>
+            </td>
+          </tr>
+          <tr
+            aria-labelledby="react-aria-:r0:-hair_color-$.0"
+            class="group/tr outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            data-key="hair_color"
+            data-middle="true"
+            role="row"
+            tabindex="-1"
+          >
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-key="hair_color.0"
+              id="react-aria-:r0:-hair_color-$.0"
+              role="rowheader"
+              tabindex="-1"
+            >
+              <div
+                class="flex flex-col"
+              >
+                <p
+                  class="text-bold text-sm capitalize"
+                >
+                  hair color:
+                </p>
+              </div>
+            </td>
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-key="hair_color.1"
+              role="gridcell"
+              tabindex="-1"
+            >
+              <div
+                class="relative flex items-center gap-2"
+              >
+                <p
+                  class="font-extrabold text-sm capitalize"
+                >
+                  blond
+                </p>
+              </div>
+            </td>
+          </tr>
+          <tr
+            aria-labelledby="react-aria-:r0:-skin_color-$.0"
+            class="group/tr outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            data-key="skin_color"
+            data-middle="true"
+            data-odd="true"
+            role="row"
+            tabindex="-1"
+          >
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-key="skin_color.0"
+              id="react-aria-:r0:-skin_color-$.0"
+              role="rowheader"
+              tabindex="-1"
+            >
+              <div
+                class="flex flex-col"
+              >
+                <p
+                  class="text-bold text-sm capitalize"
+                >
+                  skin color:
+                </p>
+              </div>
+            </td>
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-key="skin_color.1"
+              role="gridcell"
+              tabindex="-1"
+            >
+              <div
+                class="relative flex items-center gap-2"
+              >
+                <p
+                  class="font-extrabold text-sm capitalize"
+                >
+                  fair
+                </p>
+              </div>
+            </td>
+          </tr>
+          <tr
+            aria-labelledby="react-aria-:r0:-eye_color-$.0"
+            class="group/tr outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            data-key="eye_color"
+            data-middle="true"
+            role="row"
+            tabindex="-1"
+          >
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-key="eye_color.0"
+              id="react-aria-:r0:-eye_color-$.0"
+              role="rowheader"
+              tabindex="-1"
+            >
+              <div
+                class="flex flex-col"
+              >
+                <p
+                  class="text-bold text-sm capitalize"
+                >
+                  eye color:
+                </p>
+              </div>
+            </td>
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-key="eye_color.1"
+              role="gridcell"
+              tabindex="-1"
+            >
+              <div
+                class="relative flex items-center gap-2"
+              >
+                <p
+                  class="font-extrabold text-sm capitalize"
+                >
+                  blue
+                </p>
+              </div>
+            </td>
+          </tr>
+          <tr
+            aria-labelledby="react-aria-:r0:-birth_year-$.0"
+            class="group/tr outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            data-key="birth_year"
+            data-middle="true"
+            data-odd="true"
+            role="row"
+            tabindex="-1"
+          >
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-key="birth_year.0"
+              id="react-aria-:r0:-birth_year-$.0"
+              role="rowheader"
+              tabindex="-1"
+            >
+              <div
+                class="flex flex-col"
+              >
+                <p
+                  class="text-bold text-sm capitalize"
+                >
+                  birth year:
+                </p>
+              </div>
+            </td>
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-key="birth_year.1"
+              role="gridcell"
+              tabindex="-1"
+            >
+              <div
+                class="relative flex items-center gap-2"
+              >
+                <p
+                  class="font-extrabold text-sm capitalize"
+                >
+                  19BBY
+                </p>
+              </div>
+            </td>
+          </tr>
+          <tr
+            aria-labelledby="react-aria-:r0:-home_planet-$.0"
+            class="group/tr outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            data-key="home_planet"
+            data-middle="true"
+            role="row"
+            tabindex="-1"
+          >
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-key="home_planet.0"
+              id="react-aria-:r0:-home_planet-$.0"
+              role="rowheader"
+              tabindex="-1"
+            >
+              <div
+                class="flex flex-col"
+              >
+                <p
+                  class="text-bold text-sm capitalize"
+                >
+                  home planet:
+                </p>
+              </div>
+            </td>
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-key="home_planet.1"
+              role="gridcell"
+              tabindex="-1"
+            >
+              <div
+                class="relative flex items-center gap-2"
+              >
+                <p
+                  class="font-extrabold text-sm capitalize"
+                >
+                  Unknown
+                </p>
+              </div>
+            </td>
+          </tr>
+          <tr
+            aria-labelledby="react-aria-:r0:-movies-$.0"
+            class="group/tr outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            data-key="movies"
+            data-middle="true"
+            data-odd="true"
+            role="row"
+            tabindex="-1"
+          >
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-key="movies.0"
+              id="react-aria-:r0:-movies-$.0"
+              role="rowheader"
+              tabindex="-1"
+            >
+              <div
+                class="flex flex-col"
+              >
+                <p
+                  class="text-bold text-sm capitalize"
+                >
+                  movies:
+                </p>
+              </div>
+            </td>
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-key="movies.1"
+              role="gridcell"
+              tabindex="-1"
+            >
+              <div
+                class="relative flex items-center gap-2"
+              >
+                <p
+                  class="font-extrabold text-sm capitalize"
+                >
+                  Unknown
+                </p>
+              </div>
+            </td>
+          </tr>
+          <tr
+            aria-labelledby="react-aria-:r0:-ships-$.0"
+            class="group/tr outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            data-key="ships"
+            data-last="true"
+            role="row"
+            tabindex="-1"
+          >
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-key="ships.0"
+              id="react-aria-:r0:-ships-$.0"
+              role="rowheader"
+              tabindex="-1"
+            >
+              <div
+                class="flex flex-col"
+              >
+                <p
+                  class="text-bold text-sm capitalize"
+                >
+                  ships:
+                </p>
+              </div>
+            </td>
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-key="ships.1"
+              role="gridcell"
+              tabindex="-1"
+            >
+              <div
+                class="relative flex items-center gap-2"
+              >
+                <p
+                  class="font-extrabold text-sm capitalize"
+                >
+                  Unknown
+                </p>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;

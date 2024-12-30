@@ -7,6 +7,7 @@ export function useFetchPlanets() {
     Record<string, PlanetType>
   >({});
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchPlanets = async () => {
@@ -22,7 +23,7 @@ export function useFetchPlanets() {
         );
         setPlanetsObject(planetsMap);
       } catch (err) {
-        console.error("Error fetching planets:", err);
+        setError((err as Error).message);
       } finally {
         setLoading(false);
       }
@@ -31,5 +32,5 @@ export function useFetchPlanets() {
     fetchPlanets();
   }, []);
 
-  return { planetsObject, loading };
+  return { planetsObject, loading, error };
 }

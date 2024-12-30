@@ -1,5 +1,4 @@
 export interface PlanetType {
-  uid: string;
   name: string;
   url: string;
 }
