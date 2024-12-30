@@ -6,7 +6,7 @@ import { fetchAllItems } from "@/utilities/fetchAllItems";
 import CharacterCard from "@/components/characters/CharacterCard";
 import { Pagination } from "@nextui-org/react";
 import { CharacterListItem, Planet } from "@/types/characters";
-import { SearchBox } from "@/components/shared/SearchBox"; // Import the SearchBox component
+import { SearchBox } from "@/components/shared/SearchBox";
 import { useDebouncedValue } from "@/hooks/useDebouncedValue";
 
 export default function Page() {
@@ -22,7 +22,7 @@ export default function Page() {
     loading: loadingCharacters,
     error,
     setPage,
-    setSearchQuery: triggerSearch, // Function to set search query in the hook
+    setSearchQuery: triggerSearch,
     totalPages,
     currentPage,
   } = usePagination<CharacterListItem>("people");

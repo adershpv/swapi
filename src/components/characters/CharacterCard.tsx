@@ -26,7 +26,7 @@ export default function CharacterCard({
   onRemoveFavorite,
 }: {
   character: CharacterListItem;
-  onRemoveFavorite?: (characterUrl: string) => void; // Optional callback for removal
+  onRemoveFavorite?: (characterUrl: string) => void;
 }) {
   const id = character.url.split("/").filter(Boolean).pop();
 
@@ -40,7 +40,7 @@ export default function CharacterCard({
     if (isFav) {
       removeFavorite(character.url);
       setIsFav(false);
-      onRemoveFavorite?.(character.url); // Notify parent about the removal
+      onRemoveFavorite?.(character.url);
     } else {
       addFavorite(character.url);
       setIsFav(true);
@@ -71,20 +71,28 @@ export default function CharacterCard({
       </Link>
       <Divider />
       <CardBody>
-        <div className="text-bold text-tiny capitalize text-default-600">
-          Gender:{" "}
-          {character.gender ? (
-            <Chip
-              className="capitalize"
-              color={statusColorMap[character.gender] || "primary"}
-              size="sm"
-              variant="flat"
-            >
-              {character.gender}
+        <div className="grid grid-cols-2 text-bold text-tiny capitalize text-default-600">
+          <div>
+            Gender:{" "}
+            {character.gender ? (
+              <Chip
+                className="capitalize"
+                color={statusColorMap[character.gender] || "primary"}
+                size="sm"
+                variant="flat"
+              >
+                {character.gender}
+              </Chip>
+            ) : (
+              <span>Unknown</span>
+            )}
+          </div>
+          <div>
+            Height:{" "}
+            <Chip className="lowercase" size="sm" variant="flat">
+              {character.height} cms
             </Chip>
-          ) : (
-            <span>Unknown</span>
-          )}
+          </div>
         </div>
       </CardBody>
       <Divider />
