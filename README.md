@@ -47,7 +47,7 @@ A web application that displays details of characters from the Star Wars univers
 
 ### Prerequisites
 - **Node.js** (v16 or higher)
-- **npm** (v7 or higher) or **yarn**
+- **npm** (v7 or higher)
 
 ### Steps
 1. Clone the repository:
@@ -57,17 +57,16 @@ A web application that displays details of characters from the Star Wars univers
    ```
 
 2. Install dependencies:
+
+   **Note:** This project uses React 19 and Next.js 15, which may have compatibility issues with some dependencies. To resolve this, use the `--force` flag when installing dependencies:
+
    ```bash
-   npm install
-   # or
-   yarn install
+   npm install --force
    ```
 
 3. Start the development server:
    ```bash
    npm run dev
-   # or
-   yarn dev
    ```
 
 4. Open the application in your browser:
@@ -81,8 +80,6 @@ A web application that displays details of characters from the Star Wars univers
 - To run tests:
   ```bash
   npm run test
-  # or
-  yarn test
   ```
 
 ## Considerations for Scaling
