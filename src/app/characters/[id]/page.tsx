@@ -34,10 +34,5 @@ export default async function Page({ params }: { params: { id: string } }) {
     .filter((ship) => ship.pilots.includes(character.url))
     .map((ship) => ({ name: ship.name, url: ship.url }));
 
-  return (
-    <>
-      <h1 className="text-4xl font-extrabold my-6">{character.name}</h1>
-      <CharacterDetail character={character} />
-    </>
-  );
+  return <CharacterDetail character={character} />;
 }
