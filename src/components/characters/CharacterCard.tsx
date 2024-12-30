@@ -1,6 +1,6 @@
 "use client";
 
-import { CharacterListItem } from "@/app/types";
+import { CharacterListItem } from "@/types/characters";
 import {
   Card,
   CardHeader,
@@ -12,7 +12,7 @@ import {
   Chip,
 } from "@nextui-org/react";
 
-const statusColorMap = {
+const statusColorMap: Record<string, "primary" | "secondary"> = {
   male: "primary",
   female: "secondary",
 };
@@ -37,14 +37,18 @@ export default function CharacterCard({
         <CardBody>
           <div className="text-bold text-tiny capitalize text-default-600">
             Gender:{" "}
-            <Chip
-              className="capitalize"
-              color={statusColorMap[character.gender]}
-              size="sm"
-              variant="flat"
-            >
-              {character.gender}
-            </Chip>
+            {character.gender ? (
+              <Chip
+                className="capitalize"
+                color={statusColorMap[character.gender] || "primary"}
+                size="sm"
+                variant="flat"
+              >
+                {character.gender}
+              </Chip>
+            ) : (
+              <span>Unknown</span>
+            )}
           </div>
         </CardBody>
         <Divider />
@@ -53,7 +57,7 @@ export default function CharacterCard({
             <span className="text-bold text-tiny capitalize text-default-600">
               Home planet:{" "}
             </span>
-            {character.homeplanet.name}
+            {character.homeplanet?.name || "Unknown"}
           </p>
         </CardFooter>
       </Card>

@@ -8,6 +8,8 @@ export interface CharacterListItem {
   name: string;
   url: string;
   homeworld: string;
+  gender?: string;
+  homeplanet?: Planet;
   [key: string]: any;
 }
 

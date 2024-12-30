@@ -11,7 +11,7 @@ import {
   Link,
 } from "@nextui-org/react";
 import { usePathname } from "next/navigation";
-import { StarWarsLogo } from "./StarWarsLogo";
+import { StarWarsLogo } from "../icons/StarWarsLogo";
 import { useState } from "react";
 
 const menuItems = [
@@ -38,9 +38,11 @@ export default function Navigation() {
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
-        <NavbarBrand>
-          <StarWarsLogo />
-        </NavbarBrand>
+        <Link href="/characters">
+          <NavbarBrand>
+            <StarWarsLogo />
+          </NavbarBrand>
+        </Link>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">

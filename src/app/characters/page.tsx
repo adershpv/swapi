@@ -3,9 +3,9 @@
 import { useEffect, useState } from "react";
 import { usePagination } from "@/hooks/usePagination";
 import { fetchAllItems } from "@/utilities/fetchAllItems";
-import CharacterCard from "@/components/CharacterCard";
-import { CharacterListItem, Planet } from "../types";
+import CharacterCard from "@/components/characters/CharacterCard";
 import { Pagination } from "@nextui-org/react";
+import { CharacterListItem, Planet } from "@/types/characters";
 
 export default function Page() {
   const [planetsObject, setPlanetsObject] = useState<Record<string, Planet>>(

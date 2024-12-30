@@ -1,6 +1,6 @@
 import { SWAPI_BASE_URL } from "@/app/constants";
-import { Character } from "@/app/types";
-import CharacterDetail from "@/components/CharacterDetail";
+import CharacterDetail from "@/components/characters/CharacterDetail";
+import { Character } from "@/types/characters";
 import { fetchAllItems } from "@/utilities/fetchAllItems";
 
 export default async function Page({ params }: { params: { id: string } }) {

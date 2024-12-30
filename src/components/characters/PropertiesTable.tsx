@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Table,
   TableHeader,
@@ -7,16 +9,25 @@ import {
   TableCell,
   Tooltip,
 } from "@nextui-org/react";
-import { EditIcon } from "./EditIcon";
 import { EDITABLE_PROPERTIES } from "@/app/constants";
+import { EditIcon } from "../icons/EditIcon";
 
-export const columns = [
+export interface Property {
+  key: string;
+  value: string | number | { title?: string; name?: string }[] | null;
+}
+
+interface PropertiesTableProps {
+  properties: Property[];
+}
+
+export const columns: { name: string; uid: string }[] = [
   { name: "PROPERTY", uid: "property" },
   { name: "DETAIL", uid: "detail" },
 ];
 
-export default function PropertiesTable({ properties }) {
-  const renderRow = ({ key, value }) => {
+export default function PropertiesTable({ properties }: PropertiesTableProps) {
+  const renderRow = ({ key, value }: Property) => {
     const property = key.replace("_", " ");
     return (
       <TableRow key={key}>
@@ -30,7 +41,7 @@ export default function PropertiesTable({ properties }) {
             <p className="font-extrabold text-sm capitalize">
               {Array.isArray(value)
                 ? value.map((item) => item.title || item.name).join(", ")
-                : value}
+                : (value ?? "Unknown")}
             </p>
             {EDITABLE_PROPERTIES.includes(key) && (
               <Tooltip content={`Edit ${property}`}>
