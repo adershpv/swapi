@@ -3,7 +3,9 @@ import { CharacterDetail } from "@/components/characters/CharacterDetail";
 import { CharacterType } from "@/types/characters";
 import { fetchAllItems } from "@/utilities/fetchAllItems";
 
-export default async function Page({ params }: { params: { id: string } }) {
+type Params = Promise<{ id: string }>;
+
+export default async function Page({ params }: { params: Params }) {
   const { id } = await params;
   const response = await fetch(`${SWAPI_BASE_URL}/people/${id}`);
   const character: CharacterType = await response.json();
