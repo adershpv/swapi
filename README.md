@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Star Wars Character Explorer
 
-## Getting Started
+A web application that displays details of characters from the Star Wars universe using the [swapi API](https://swapi.py4e.com/) and allows users to manage a favorites list.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 1. **Character List View**
+- Displays a paginated list of Star Wars characters with their:
+  - Name
+  - Gender
+  - Home Planet
+- Includes a search field to query characters by name.
+- Clicking on a character navigates to their details page.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. **Character Details View**
+- Displays detailed information about the selected character:
+  - Name
+  - Hair Color
+  - Eye Color
+  - Gender
+  - Home Planet
+- Lists:
+  - Films the character has appeared in.
+  - Starships the character has piloted.
+- Provides the ability to add/remove the character from the favorites list.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. **Favorites View**
+- Displays a list of all favorite characters with their:
+  - Name
+  - Height
+  - Gender
+  - Home Planet
+- Allows the removal of characters from the favorites list.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. **Bonus Feature**
+- Enables users to amend the height or gender of a character. Changes are stored locally.
 
-## Learn More
+## Technologies Used
+- **React**: For building the user interface.
+- **TypeScript**: For type safety and maintainability.
+- **Next.js**: For server-side rendering and routing.
+- **Tailwind CSS**: For styling the application.
+- **SWAPI API**: For fetching Star Wars character data.
+- **LocalStorage**: For managing the favorites list and storing edits.
 
-To learn more about Next.js, take a look at the following resources:
+## How to Run the Project Locally
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Prerequisites
+- **Node.js** (v16 or higher)
+- **npm** (v7 or higher) or **yarn**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/adershpv/swapi.git
+   cd swapi
+   ```
 
-## Deploy on Vercel
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Open the application in your browser:
+   ```
+   http://localhost:3000
+   ```
+
+## Testing
+- **Unit Tests**: Key components and hooks are covered with unit tests.
+- **Testing Framework**: Jest and React Testing Library are used.
+- To run tests:
+  ```bash
+  npm run test
+  # or
+  yarn test
+  ```
+
+## Considerations for Scaling
+1. **Maintainability**:
+   - Components are modular and reusable.
+   - TypeScript ensures type safety across the application.
+
+2. **Scalability**:
+   - The directory structure is organized for easy addition of new features.
+   - Hooks and utilities abstract common logic, reducing duplication.
+
+3. **Collaboration**:
+   - Clear separation of concerns makes it easier for multiple teams to work on different features.
+
+## Future Enhancements
+- **Backend API**: Implement a custom backend for additional features.
+- **Authentication**: Allow users to save their favorites across devices.
+- **Theme Support**: Add light and dark mode.
+
+---
+
+Happy exploring the galaxy! 🚀
+
