@@ -81,7 +81,7 @@ export default function Page() {
             <Pagination
               showControls
               total={totalPages}
-              page={currentPage} // Bind to currentPage from the hook
+              page={currentPage}
               onChange={(page) => setPage(page)} // Update page in the hook
             />
           </div>
