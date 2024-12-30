@@ -31,9 +31,17 @@ export default function CharacterCard({
   const id = character.url.split("/").filter(Boolean).pop();
 
   const [isFav, setIsFav] = useState(false);
+  const [updatedCharacter, setUpdatedCharacter] = useState(character);
 
   useEffect(() => {
+    // Initialize favorite status
     setIsFav(isFavorite(character.url));
+
+    // Load updates from localStorage
+    const storedData = localStorage.getItem(character.url);
+    if (storedData) {
+      setUpdatedCharacter(JSON.parse(storedData));
+    }
   }, [character.url]);
 
   const toggleFavorite = () => {
@@ -63,9 +71,9 @@ export default function CharacterCard({
       </Button>
       <Link href={`/characters/${id}`} className="text-inherit">
         <CardHeader className="flex gap-3">
-          <Avatar name={character.name} />
+          <Avatar name={updatedCharacter.name} />
           <div className="flex flex-col">
-            <p className="text-lg">{character.name}</p>
+            <p className="text-lg">{updatedCharacter.name}</p>
           </div>
         </CardHeader>
       </Link>
@@ -74,14 +82,17 @@ export default function CharacterCard({
         <div className="grid grid-cols-2 text-bold text-tiny capitalize text-default-600">
           <div>
             Gender:{" "}
-            {character.gender ? (
+            {updatedCharacter.gender ? (
               <Chip
                 className="capitalize"
-                color={statusColorMap[character.gender] || "primary"}
+                color={
+                  statusColorMap[updatedCharacter.gender.toLowerCase()] ||
+                  "primary"
+                }
                 size="sm"
                 variant="flat"
               >
-                {character.gender}
+                {updatedCharacter.gender}
               </Chip>
             ) : (
               <span>Unknown</span>
@@ -90,7 +101,7 @@ export default function CharacterCard({
           <div>
             Height:{" "}
             <Chip className="lowercase" size="sm" variant="flat">
-              {character.height} cms
+              {updatedCharacter.height} cms
             </Chip>
           </div>
         </div>

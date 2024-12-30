@@ -7,18 +7,19 @@ import {
   TableBody,
   TableRow,
   TableCell,
-  Tooltip,
+  Input,
 } from "@nextui-org/react";
-import { EDITABLE_PROPERTIES } from "@/app/constants";
-import { EditIcon } from "../icons/EditIcon";
 
 export interface Property {
   key: string;
   value: string | number | { title?: string; name?: string }[] | null;
+  editable?: boolean;
+  options?: string[]; // Dropdown options for editable fields
 }
 
 interface PropertiesTableProps {
   properties: Property[];
+  onEdit: (key: string, value: string | number) => void; // Callback for edits
 }
 
 export const columns: { name: string; uid: string }[] = [
@@ -26,9 +27,21 @@ export const columns: { name: string; uid: string }[] = [
   { name: "DETAIL", uid: "detail" },
 ];
 
-export default function PropertiesTable({ properties }: PropertiesTableProps) {
-  const renderRow = ({ key, value }: Property) => {
+export default function PropertiesTable({
+  properties,
+  onEdit,
+}: PropertiesTableProps) {
+  const renderRow = ({ key, value, editable, options }: Property) => {
     const property = key.replace("_", " ");
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      onEdit(key, e.target.value);
+    };
+
+    const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+      onEdit(key, e.target.value);
+    };
+
     return (
       <TableRow key={key}>
         <TableCell>
@@ -38,17 +51,34 @@ export default function PropertiesTable({ properties }: PropertiesTableProps) {
         </TableCell>
         <TableCell>
           <div className="relative flex items-center gap-2">
-            <p className="font-extrabold text-sm capitalize">
-              {Array.isArray(value)
-                ? value.map((item) => item.title || item.name).join(", ")
-                : (value ?? "Unknown")}
-            </p>
-            {EDITABLE_PROPERTIES.includes(key) && (
-              <Tooltip content={`Edit ${property}`}>
-                <span className="text-lg text-default-400 cursor-pointer active:opacity-50">
-                  <EditIcon />
-                </span>
-              </Tooltip>
+            {editable && options ? (
+              // Render a dropdown for gender
+              <select
+                className="bg-default-100 h-10 rounded-medium w-full px-3 appearance-none tap-highlight-transparent focus:outline-none"
+                value={value as string}
+                onChange={handleSelectChange}
+              >
+                {options.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+            ) : editable ? (
+              // Render a text input for height
+              <Input
+                value={value as string}
+                onChange={handleInputChange}
+                aria-label={`Edit ${property}`}
+                type="number"
+              />
+            ) : (
+              // Render plain text for non-editable fields
+              <p className="font-extrabold text-sm capitalize">
+                {Array.isArray(value)
+                  ? value.map((item) => item.title || item.name).join(", ")
+                  : (value ?? "Unknown")}
+              </p>
             )}
           </div>
         </TableCell>
@@ -58,7 +88,7 @@ export default function PropertiesTable({ properties }: PropertiesTableProps) {
 
   return (
     <>
-      <Table aria-label="Example table with custom cells">
+      <Table aria-label="Properties Table">
         <TableHeader columns={columns}>
           {(column) => (
             <TableColumn
