@@ -7,12 +7,18 @@ export const usePagination = <T>(resource: string) => {
   const [error, setError] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const [search, setSearch] = useState<string | null>(null); // Track the search query
 
-  const fetchPageData = async (page: number) => {
+  const fetchPageData = async (page: number, searchQuery: string | null) => {
     try {
       setLoading(true);
+
+      // Construct query string
+      const params = new URLSearchParams({ page: page.toString() });
+      if (searchQuery) params.append("search", searchQuery);
+
       const response = await fetch(
-        `${SWAPI_BASE_URL}/${resource}/?page=${page}`,
+        `${SWAPI_BASE_URL}/${resource}/?${params.toString()}`,
       );
       if (!response.ok) {
         throw new Error("Failed to fetch data");
@@ -29,11 +35,21 @@ export const usePagination = <T>(resource: string) => {
   };
 
   useEffect(() => {
-    fetchPageData(currentPage);
-  }, [currentPage]);
+    fetchPageData(currentPage, search);
+  }, [currentPage, search]);
 
   const setPage = (page: number) => {
     setCurrentPage(page);
+  };
+
+  const setSearchQuery = (query: string) => {
+    if (query.trim() === "") {
+      setSearch(null); // Reset search to default
+      setCurrentPage(1); // Reset to first page
+    } else if (query !== search) {
+      setSearch(query);
+      setCurrentPage(1); // Reset to first page for a new search query
+    }
   };
 
   return {
@@ -41,6 +57,7 @@ export const usePagination = <T>(resource: string) => {
     loading,
     error,
     setPage,
+    setSearchQuery,
     totalPages,
     currentPage,
   };
