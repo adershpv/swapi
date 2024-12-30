@@ -1,10 +1,17 @@
-export type CharacterListItem = {
-  uid: number;
+export interface Planet {
+  uid: string;
   name: string;
   url: string;
-};
+}
 
-export type Character = {
+export interface CharacterListItem {
+  name: string;
+  url: string;
+  homeworld: string;
+  [key: string]: any;
+}
+
+export interface Character {
   name: string;
   height: string;
   mass: string;
@@ -21,4 +28,9 @@ export type Character = {
   created: string;
   edited: string;
   url: string;
-};
+
+  // Extended properties
+  homeplanet?: string;
+  movies?: { title: string; url: string }[];
+  ships?: { name: string; url: string }[];
+}
