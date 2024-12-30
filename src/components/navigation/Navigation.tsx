@@ -11,7 +11,7 @@ import {
   Link,
 } from "@nextui-org/react";
 import { usePathname } from "next/navigation";
-import { StarWarsLogo } from "../icons/StarWarsLogo";
+import { StarWarsLogo } from "../svg/StarWarsLogo";
 import { useState } from "react";
 
 const menuItems = [
@@ -25,7 +25,7 @@ const menuItems = [
   },
 ];
 
-export default function Navigation() {
+export const Navigation = () => {
   const pathname = usePathname();
   const isActive = (href: string): boolean => pathname.includes(href);
 
@@ -71,4 +71,4 @@ export default function Navigation() {
       </NavbarMenu>
     </Navbar>
   );
-}
+};

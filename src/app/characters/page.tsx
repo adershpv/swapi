@@ -1,19 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { usePagination } from "@/hooks/usePagination";
-import { fetchAllItems } from "@/utilities/fetchAllItems";
-import CharacterCard from "@/components/characters/CharacterCard";
+import { useFetchPlanets } from "@/hooks/useFetchPlanets";
+import { CharacterCard } from "@/components/characters/CharacterCard";
 import { Pagination } from "@nextui-org/react";
-import { CharacterListItem, Planet } from "@/types/characters";
+import { CharacterListItemType } from "@/types/characters";
 import { SearchBox } from "@/components/shared/SearchBox";
 import { useDebouncedValue } from "@/hooks/useDebouncedValue";
+import { Spinner } from "@/components/shared/Spinner";
+import { useEffect, useState } from "react";
 
 export default function Page() {
-  const [planetsObject, setPlanetsObject] = useState<Record<string, Planet>>(
-    {},
-  );
-  const [loadingPlanets, setLoadingPlanets] = useState(true);
+  const { planetsObject, loading: loadingPlanets } = useFetchPlanets();
   const [searchQuery, setSearchQuery] = useState(""); // Local state for search input
   const debouncedSearchQuery = useDebouncedValue(searchQuery, 500); // Debounced search query
 
@@ -25,31 +23,7 @@ export default function Page() {
     setSearchQuery: triggerSearch,
     totalPages,
     currentPage,
-  } = usePagination<CharacterListItem>("people");
-
-  // Fetch planet data on component mount
-  useEffect(() => {
-    const fetchPlanets = async () => {
-      setLoadingPlanets(true);
-      try {
-        const planets = await fetchAllItems<Planet>("planets");
-        const planetsMap = planets.reduce<Record<string, Planet>>(
-          (acc, planet) => {
-            acc[planet.url] = planet;
-            return acc;
-          },
-          {},
-        );
-        setPlanetsObject(planetsMap);
-      } catch (err) {
-        console.error("Error fetching planets:", err);
-      } finally {
-        setLoadingPlanets(false);
-      }
-    };
-
-    fetchPlanets();
-  }, []);
+  } = usePagination<CharacterListItemType>("people");
 
   // Trigger search when the debounced query changes
   useEffect(() => {
@@ -68,7 +42,7 @@ export default function Page() {
       <div className="mb-4">
         <SearchBox value={searchQuery} onSearchChange={setSearchQuery} />
       </div>
-      {(loadingCharacters || loadingPlanets) && <p>Loading...</p>}
+      {(loadingCharacters || loadingPlanets) && <Spinner />}
       {error && <p className="text-red-500">{error}</p>}
       {!loadingCharacters && !loadingPlanets && (
         <>

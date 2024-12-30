@@ -1,5 +1,5 @@
 import { Input } from "@nextui-org/react";
-import { SearchIcon } from "../icons/SearchIcon";
+import { SearchIcon } from "../svg/SearchIcon";
 
 interface SearchBoxProps {
   value: string;

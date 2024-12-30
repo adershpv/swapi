@@ -1,18 +1,18 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Character } from "@/types/characters";
+import { CharacterType } from "@/types/characters";
 import { DISPLAY_PROPERTIES } from "@/app/constants";
-import PropertiesTable from "./PropertiesTable";
 import { Button } from "@nextui-org/react";
-import { HeartIcon } from "../icons/HeartIcon";
+import { HeartIcon } from "../svg/HeartIcon";
 import { isFavorite, addFavorite, removeFavorite } from "@/utilities/favorites";
+import { PropertyTable } from "./PropertyTable";
 
-export default function CharacterDetail({
+export const CharacterDetail = ({
   character,
 }: {
-  character: Character;
-}) {
+  character: CharacterType;
+}) => {
   const [isFav, setIsFav] = useState(false);
   const [editableCharacter, setEditableCharacter] = useState(character);
 
@@ -43,12 +43,31 @@ export default function CharacterDetail({
     localStorage.setItem(character.url, JSON.stringify(updatedCharacter));
   };
 
-  const details = DISPLAY_PROPERTIES.map((key) => ({
-    key,
-    value: editableCharacter[key] ?? null, // Replace `undefined` with `null`
-    editable: key === "height" || key === "gender", // Allow editing for height and gender
-    options: key === "gender" ? ["Male", "Female", "N/A"] : undefined, // Dropdown options for gender
-  }));
+  // Normalize values for the properties table
+  const details = DISPLAY_PROPERTIES.map((key) => {
+    const rawValue = editableCharacter[key] ?? null;
+
+    let normalizedValue:
+      | string
+      | number
+      | { title?: string; name?: string }[]
+      | null;
+
+    if (Array.isArray(rawValue)) {
+      normalizedValue = rawValue.map((item) =>
+        typeof item === "string" ? { title: item, name: item } : { ...item },
+      );
+    } else {
+      normalizedValue = rawValue;
+    }
+
+    return {
+      key,
+      value: normalizedValue,
+      editable: key === "height" || key === "gender", // Allow editing for height and gender
+      options: key === "gender" ? ["Male", "Female", "N/A"] : undefined, // Dropdown options for gender
+    };
+  });
 
   return (
     <>
@@ -70,7 +89,7 @@ export default function CharacterDetail({
         </Button>
       </div>
 
-      <PropertiesTable properties={details} onEdit={handleEdit} />
+      <PropertyTable properties={details} onEdit={handleEdit} />
     </>
   );
-}
+};

@@ -1,10 +1,10 @@
-import { Character } from "@/types/characters";
+import { CharacterType } from "@/types/characters";
 
 export const SWAPI_BASE_URL = "https://swapi.py4e.com/api";
 
 export const EDITABLE_PROPERTIES = ["height", "gender"];
 
-export const DISPLAY_PROPERTIES: Array<keyof Character> = [
+export const DISPLAY_PROPERTIES: Array<keyof CharacterType> = [
   "name",
   "height",
   "gender",

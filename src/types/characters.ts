@@ -1,19 +1,19 @@
-export interface Planet {
+export interface PlanetType {
   uid: string;
   name: string;
   url: string;
 }
 
-export interface CharacterListItem {
+export interface CharacterListItemType {
   name: string;
   url: string;
   homeworld: string;
   gender?: string;
-  homeplanet?: Planet;
+  homeplanet?: PlanetType;
   [key: string]: any;
 }
 
-export interface Character {
+export interface CharacterType {
   name: string;
   height: string;
   mass: string;

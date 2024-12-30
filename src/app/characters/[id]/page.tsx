@@ -1,12 +1,12 @@
 import { SWAPI_BASE_URL } from "@/app/constants";
-import CharacterDetail from "@/components/characters/CharacterDetail";
-import { Character } from "@/types/characters";
+import { CharacterDetail } from "@/components/characters/CharacterDetail";
+import { CharacterType } from "@/types/characters";
 import { fetchAllItems } from "@/utilities/fetchAllItems";
 
 export default async function Page({ params }: { params: { id: string } }) {
-  const { id } = params;
+  const { id } = await params;
   const response = await fetch(`${SWAPI_BASE_URL}/people/${id}`);
-  const character: Character = await response.json();
+  const character: CharacterType = await response.json();
 
   // Fetch the home planet
   const homeplanetReq = await fetch(character.homeworld);

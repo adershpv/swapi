@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { CharacterListItem } from "@/types/characters";
+import { CharacterListItemType } from "@/types/characters";
 import {
   Card,
   CardHeader,
@@ -13,7 +13,7 @@ import {
   Button,
   Link,
 } from "@nextui-org/react";
-import { HeartIcon } from "@/components/icons/HeartIcon";
+import { HeartIcon } from "@/components/svg/HeartIcon";
 import { isFavorite, addFavorite, removeFavorite } from "@/utilities/favorites";
 
 const statusColorMap: Record<string, "primary" | "secondary"> = {
@@ -21,13 +21,13 @@ const statusColorMap: Record<string, "primary" | "secondary"> = {
   female: "secondary",
 };
 
-export default function CharacterCard({
+export const CharacterCard = ({
   character,
   onRemoveFavorite,
 }: {
-  character: CharacterListItem;
+  character: CharacterListItemType;
   onRemoveFavorite?: (characterUrl: string) => void;
-}) {
+}) => {
   const id = character.url.split("/").filter(Boolean).pop();
 
   const [isFav, setIsFav] = useState(false);
@@ -101,7 +101,8 @@ export default function CharacterCard({
           <div>
             Height:{" "}
             <Chip className="lowercase" size="sm" variant="flat">
-              {updatedCharacter.height} cms
+              {updatedCharacter.height}{" "}
+              {!isNaN(Number(updatedCharacter.height)) && "cms"}
             </Chip>
           </div>
         </div>
@@ -117,4 +118,4 @@ export default function CharacterCard({
       </CardFooter>
     </Card>
   );
-}
+};
